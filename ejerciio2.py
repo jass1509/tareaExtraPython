@@ -1,9 +1,17 @@
-nota1=input("ingrese la primera nota ")
-nota2=input("ingrese la segunda nota ")
-nota3=input("ingrese la tercera nota ")
-nota4=input("ingrese la cuarta nota ")
-suma_notas= float(nota1) + float(nota2) + float(nota3) + float(nota4)
-lista_notas= [float(nota1), float(nota2), float(nota3), float(nota4)]
+lista_notas=[]
+while True:
+    entrada = input("Ingrese una nota (o 'q' para terminar): ")
+
+    if entrada == "q":
+        break
+
+    nota = float(entrada)
+    lista_notas.append(nota)
+
+suma_notas=0
+for elementos in lista_notas:
+    suma_notas+=elementos
+
 
 minimo=lista_notas[0]
 maximo=lista_notas[0]
